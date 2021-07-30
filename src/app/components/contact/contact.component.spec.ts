@@ -35,9 +35,10 @@ describe('ContactComponent', () => {
     expect(comp.text).toEqual('contact page');
   }));
 
-  it(`should set submitted to true`, async(() => {
+  it(`should set submitted to true and alert form control values`, async(() => {
     comp.onSubmit();
     expect(comp.submitted).toBeTruthy();
+    expect(alert(comp.contactForm.value));
   }));
 
   it(`should call the onSubmit method`, async(() => {
